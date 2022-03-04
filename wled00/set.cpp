@@ -171,7 +171,7 @@ void handleSettingsSet(AsyncWebServerRequest *request, byte subPage)
         #ifdef ESP32
         pinMode(btnPin[i], buttonType[i]==BTN_TYPE_PUSH_ACT_HIGH ? INPUT_PULLDOWN : INPUT_PULLUP);
         #else
-        pinMode(btnPin[i], INPUT_PULLUP);
+        pinMode(btnPin[i], INPUT);
         #endif
       } else {
         btnPin[i] = -1;

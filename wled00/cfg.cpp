@@ -203,7 +203,7 @@ bool deserializeConfig(JsonObject doc, bool fromFS) {
         #ifdef ESP32
         pinMode(btnPin[s], buttonType[s]==BTN_TYPE_PUSH_ACT_HIGH ? INPUT_PULLDOWN : INPUT_PULLUP);
         #else
-        pinMode(btnPin[s], INPUT_PULLUP);
+        pinMode(btnPin[s], INPUT);
         #endif
       } else {
         btnPin[s] = -1;
