@@ -162,7 +162,7 @@ void handleSettingsSet(AsyncWebServerRequest *request, byte subPage)
       int hw_btn_pin = request->arg(bt).toInt();
       if (pinManager.allocatePin(hw_btn_pin,false,PinOwner::Button)) {
         btnPin[i] = hw_btn_pin;
-        pinMode(btnPin[i], INPUT_PULLUP);
+        pinMode(btnPin[i], INPUT);
         buttonType[i] = request->arg(be).toInt();
       } else {
         btnPin[i] = -1;

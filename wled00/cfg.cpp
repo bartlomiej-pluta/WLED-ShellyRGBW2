@@ -157,7 +157,7 @@ bool deserializeConfig(JsonObject doc, bool fromFS) {
       int8_t pin = btn["pin"][0] | -1;
       if (pin > -1 && pinManager.allocatePin(pin, false, PinOwner::Button)) {
         btnPin[s] = pin;
-        pinMode(btnPin[s], INPUT_PULLUP);
+        pinMode(btnPin[s], INPUT);
       } else {
         btnPin[s] = -1;
       }
